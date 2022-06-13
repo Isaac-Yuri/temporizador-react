@@ -2,7 +2,7 @@ import { useState, useEffect, MouseEvent } from "react";
 import "./App.css";
 
 function App() {
-  const [numberOfUserMinutes, setNumberOfUserMinutes] = useState(25);
+  const [numberOfUserMinutes, setNumberOfUserMinutes] = useState(5);
   const [secondsAmount, setSecondsAmount] = useState(numberOfUserMinutes * 60);
   const [initialValueInSeconds, setInitialValueInSeconds] =
     useState(secondsAmount);
@@ -30,7 +30,7 @@ function App() {
     }
   }
 
-  async function startCounter() {
+  function startCounter() {
     setTimeout(() => {
       if (secondsAmount > 0 && !isStarting) {
         setSecondsAmount((state) => state - 1);
@@ -43,8 +43,8 @@ function App() {
     const newTime = Number(
       prompt("Digite quantos minutos deseja que o contador tenha")
     );
+    setSecondsAmount(newTime * 60);
     setNumberOfUserMinutes(newTime);
-    setSecondsAmount(numberOfUserMinutes * 60);
     setInitialValueInSeconds(secondsAmount);
   }
 
