@@ -13,9 +13,12 @@ function App() {
 
   useEffect(() => {
     if (isStarting && secondsAmount > 0) {
-      var intervalId = setInterval(() => {
+      setTimeout(() => {
         setSecondsAmount((state) => state - 1);
       }, 1000);
+    }
+    if (secondsAmount === 0) {
+      alert("O tempo acabou!");
     }
   }, [secondsAmount]);
 
@@ -28,11 +31,12 @@ function App() {
   }
 
   async function startCounter() {
-    var intervalId = setInterval(() => {
-      setSecondsAmount((state) => state - 1);
-      setIsStarting(true);
+    setTimeout(() => {
+      if (secondsAmount > 0 && !isStarting) {
+        setSecondsAmount((state) => state - 1);
+        setIsStarting(true);
+      }
     }, 1000);
-    clearInterval(intervalId);
   }
 
   function setNewTime() {
@@ -54,7 +58,7 @@ function App() {
         </div>
         <div className="box-buttons">
           <div className="button-start-and-stop start" onClick={start}>
-            {!isStarting ? "Iniciar" : "Reiniciar"}
+            Iniciar
           </div>
           <div
             className="button-start-and-stop stop"
