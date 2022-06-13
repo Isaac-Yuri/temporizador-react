@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     if (isStarting && secondsAmount > 0) {
-      setTimeout(() => {
+      var intervalId = setInterval(() => {
         setSecondsAmount((state) => state - 1);
       }, 1000);
     }
@@ -27,11 +27,12 @@ function App() {
     }
   }
 
-  function startCounter() {
-    setTimeout(() => {
+  async function startCounter() {
+    var intervalId = setInterval(() => {
       setSecondsAmount((state) => state - 1);
       setIsStarting(true);
     }, 1000);
+    clearInterval(intervalId);
   }
 
   function setNewTime() {
