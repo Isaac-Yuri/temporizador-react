@@ -41,6 +41,7 @@
   border-radius: 150px 150px 0px 0px;
   border-bottom: 1px;
   font-size: 2rem;
+  font-weight: bold;
 }
 
 .box-buttons {
@@ -52,6 +53,7 @@
   height: 100%;
   display: flex;
   transition: 0.2s;
+  font-weight: bold;
 }
 
 .button-start-and-stop:hover {
