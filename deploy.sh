@@ -4,7 +4,7 @@
 set -e
 
 # build
-npm run build
+yarn build
 
 # navigate into the build output directory
 cd dist
@@ -13,7 +13,7 @@ cd dist
 # echo 'www.example.com' > CNAME
 
 git init
-git checkout -b master
+git checkout -b teste
 git add -A
 git commit -m 'deploy'
 
