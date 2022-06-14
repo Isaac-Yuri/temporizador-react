@@ -12,7 +12,7 @@
 
 <h1 align="center">
     <a href="https://isaac-yuri.github.io/temporizador-react/">
-        <img alt="Imagem do projeto" src="./src/assets/image-project.png" />
+        <img alt="Imagem do projeto" src="./src/assets/image-project.png" target='_blank' />
     </a>
 </h1>
 
