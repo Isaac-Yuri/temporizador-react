@@ -11,7 +11,9 @@
 ## Temporizar simples feito com <a href="https://pt-br.reactjs.org/">🔗 React</a>.
 
 <h1 align="center">
-    <img alt="Imagem do projeto" src="./src/assets/image-project.png" />
+    <a href="https://isaac-yuri.github.io/temporizador-react/">
+        <img alt="Imagem do projeto" src="./src/assets/image-project.png" />
+    </a>
 </h1>
 
 ### 🛠️ Ferramentas && tecnologias usadas:
